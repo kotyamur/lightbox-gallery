@@ -6,11 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
-    <script type="module" crossorigin src="/lightbox-gallery/assets/index-64649f26.js"></script>
+    <script type="module" crossorigin src="/lightbox-gallery/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/lightbox-gallery/assets/vendor-0e0a91e3.js">
+    <link rel="stylesheet" href="/lightbox-gallery/assets/vendor-a088063d.css">
     <link rel="stylesheet" href="/lightbox-gallery/assets/index-eef4a7a2.css">
   </head>
   <body>
     <ul class="gallery js-gallery"></ul>
+
+    <!-- 1 варіант -->
+
+    <template class="gallery-teml">
+      <li class="gallery__item">
+        <a
+            class="gallery__link"
+            href="{{original}}"
+        >
+            <img
+            class="gallery__image"
+            src="{{preview}}"
+            data-source="{{original}}"
+            alt="Tulips"
+            />
+        </a>
+        </li>
+    </template>
 
     
   </body>
